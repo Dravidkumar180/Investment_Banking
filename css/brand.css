@@ -1,0 +1,14 @@
+/* Warm gold treatment complements the site's navy-and-gold palette. */
+.brand { display: inline-flex; flex-shrink: 0; align-items: center; line-height: 1; }
+.stackly-logo {
+  display: block;
+  width: 165px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(70%) sepia(35%) saturate(570%) hue-rotate(1deg) brightness(90%) contrast(92%);
+}
+.footer-top > .brand { align-self: start; }
+.error-brand { display: flex; justify-content: center; margin: 0 0 30px; padding: 22px 28px; background: var(--navy); width: fit-content; margin-inline: auto; border-radius: 4px; }
+.error-brand .stackly-logo { width: 180px; }
+@media (max-width: 760px) { .brand .stackly-logo { width: 145px; } }

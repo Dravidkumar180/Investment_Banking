@@ -1,0 +1,25 @@
+/* Standalone error page, with no shared navigation or scripts. */
+.error-page { background: #f4f3ef; color: var(--navy); }
+.error-layout {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+  background: radial-gradient(ellipse at 50% 35%, #fff 0%, transparent 70%);
+}
+.error-card { width: min(100%, 680px); padding: clamp(32px, 6vw, 64px) 24px; text-align: center; }
+.error-card::before { content: ''; display: block; width: 48px; height: 2px; background: var(--gold); margin: 0 auto 30px; }
+.error-brand { font: 18px/1.5 Georgia, serif; letter-spacing: 3px; color: var(--navy); margin-bottom: 25px; }
+.error-brand span { display: block; font: 8px/2 Inter, Arial, sans-serif; letter-spacing: 5px; color: #75623e; }
+.error-number { font: 400 clamp(110px, 23vw, 180px)/1.05 'Playfair Display', Georgia, serif; color: #b39150; letter-spacing: -5px; margin: 0 0 25px; }
+.error-card .eyebrow { margin-bottom: 16px; }
+.error-card h1 { font-size: clamp(32px, 5vw, 46px); letter-spacing: -1px; margin: 0 0 20px; }
+.error-description { font-size: 14px; line-height: 1.9; margin: 0 auto 30px; max-width: 420px; }
+.error-card .button { justify-content: center; gap: 14px; min-width: 180px; }
+.error-note { font-size: 10px; letter-spacing: 1px; color: #77818b; margin: 38px 0 0; }
+@media (max-width: 400px) {
+  .error-layout { padding: 20px 12px; }
+  .error-card { padding: 20px 8px; }
+  .error-description br { display: none; }
+}

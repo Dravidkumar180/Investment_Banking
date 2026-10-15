@@ -1,0 +1,3 @@
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function run(el){const end=Number(el.dataset.target),suffix=el.dataset.suffix;let start;function frame(time){start??=time;const t=Math.min((time-start)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-t,3)))+suffix;if(t<1)requestAnimationFrame(frame)}if(reduced)el.textContent=end+suffix;else requestAnimationFrame(frame)}
+if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){run(e.target);observer.unobserve(e.target)}}));document.querySelectorAll('.counter').forEach(e=>observer.observe(e))}else document.querySelectorAll('.counter').forEach(run);

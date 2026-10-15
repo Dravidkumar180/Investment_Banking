@@ -1,0 +1,46 @@
+/* Reference-inspired footer with four clear columns and teal accents. */
+.site-footer {
+  --footer-accent: #59e1cf;
+  background: #102b42;
+  color: #fff;
+  padding: 72px max(5.5vw, 24px) 26px;
+}
+.footer-grid {
+  max-width: 1360px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.55fr .8fr 1.15fr 1.15fr;
+  gap: clamp(28px, 5vw, 76px);
+  align-items: start;
+}
+.site-footer .brand .stackly-logo { width: 145px; }
+.footer-brand-column > p { color: #bbcedb; font-size: 14px; line-height: 1.9; max-width: 310px; margin: 25px 0 24px; }
+.footer-conversation { color: var(--footer-accent); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; line-height: 1.6; }
+.site-footer svg { width: 19px; height: 19px; flex-shrink: 0; }
+.footer-shortcuts { display: flex; gap: 12px; margin-top: 24px; }
+.footer-shortcuts a { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 13px; border: 1px solid #355569; background: #17384b; color: #b8d2dc; transition: color .2s, background .2s, transform .2s; }
+.footer-shortcuts a:hover { color: #102b42; background: var(--footer-accent); transform: translateY(-3px); }
+.footer-column h2 { font: 600 15px/1.5 Inter, Arial, sans-serif; letter-spacing: -.3px; margin: 0 0 25px; color: white; }
+.footer-column ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 15px; }
+.footer-column li { font-size: 13px; line-height: 1.7; }
+.footer-column a { color: #bbcedb; transition: color .2s; }
+.footer-column a:hover, .footer-conversation:hover { color: var(--footer-accent); }
+.site-footer a:focus-visible { outline-color: var(--footer-accent); }
+.footer-contact .contact-row { display: flex; align-items: start; gap: 13px; font-size: 13px; line-height: 1.8; color: #bbcedb; margin-bottom: 20px; }
+.contact-row svg { color: var(--footer-accent); margin-top: 3px; width: 17px; height: 17px; }
+.footer-contact-note { font-size: 10px; line-height: 1.7; color: #93acbd; max-width: 220px; }
+.footer-legal { max-width: 1360px; margin: 48px auto 0; padding-top: 22px; border-top: 1px solid #ffffff1c; display: flex; justify-content: space-between; gap: 15px; color: #a5bdcc; font-size: 10px; }
+.footer-disclaimer { max-width: 1360px; margin: 12px auto 0; font-size: 9px; line-height: 1.8; color: #93acbd; }
+@media (max-width: 1050px) {
+  .footer-grid { grid-template-columns: 1.2fr 1fr; gap: 42px 60px; }
+  .footer-brand-column > p { max-width: 350px; }
+}
+@media (max-width: 560px) {
+  .site-footer { padding: 48px 6% 24px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px 22px; }
+  .footer-brand-column, .footer-contact { grid-column: 1 / -1; }
+  .footer-column h2 { margin-bottom: 18px; }
+  .footer-column ul { gap: 12px; }
+  .footer-legal { margin-top: 30px; flex-direction: column; gap: 8px; }
+}
+@media (max-width: 350px) { .footer-grid { grid-template-columns: 1fr; } }
